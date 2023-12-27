@@ -7,6 +7,12 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "crypto-js": "^4.2.0",
+    "konva": "^9.2.3",
+    "leaflet": "^1.9.4",
+    "marked": "^11.0.1",
+    "mpegts.js": "^1.7.3",
+    "three": "^0.159.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
