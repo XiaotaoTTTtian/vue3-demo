@@ -61,6 +61,7 @@ const setRouter = (name) => {
   background: #ccc;
 }
 .content {
+  position: relative;
   flex: 1;
 }
 .item {
