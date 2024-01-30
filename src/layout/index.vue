@@ -7,6 +7,8 @@
       <div class="item" @click="setRouter('knova')">knova</div>
       <div class="item" @click="setRouter('knovaDemo')">knovaDemo</div>
       <div class="item" @click="setRouter('threeShaderMaterial')">threeShaderMaterial</div>
+      <div class="item" @click="setRouter('ExcelShow')">ExcelShow</div>
+      <div class="item" @click="setRouter('PdfShow')">PdfShow</div>
     </div>
     <div class="content">
       <!-- <component :is="componentNamea" /> -->
@@ -16,6 +18,8 @@
       <knovaPage v-if="componentNamea === 'knova'" />
       <knovaDemo v-if="componentNamea === 'knovaDemo'" />
       <threeShaderMaterial v-if="componentNamea === 'threeShaderMaterial'" />
+      <ExcelShow v-if="componentNamea === 'ExcelShow'" />
+      <PdfShow v-if="componentNamea === 'PdfShow'" />
     </div>
   </div>
 </template>
@@ -28,6 +32,8 @@ import towVideoPage from '../views/towVideoPage.vue';
 import knovaPage from '@/views/knovaPage.vue';
 import knovaDemo from '@/views/knovaDemo.vue';
 import threeShaderMaterial from '@/views/threeShaderMaterial.vue';
+import ExcelShow from '@/views/excelShow.vue';
+import PdfShow from '@/views/pdfShow.vue';
 
 const locationComponentName = localStorage.getItem('locationComponentName')
 // console.log();

@@ -10,6 +10,7 @@
   <button @click="switchMatailer"> 材质切换 </button>
   <button @click="switchMatailer1"> 材质切换1 </button>
   <button @click="addPhysicsTexture"> 添加物理材质 </button>
+  <button @click="deleteShaderMap"> 删除着色器贴图 </button>
   <input type="file" @change="modelFileChange" id="modelFileId" style="display: none;" multiple />
   <input type="file" @change="physicsModelFileChange" id="physicsModelFileId" style="display: none;" multiple />
   <input type="file" @change="imgFileChange" id="imgFileId" style="display: none;" />
@@ -186,14 +187,16 @@ const fileLoadFun = (file) => {
 const loadObjFile = (url) => {
   new OBJLoader().load(url, object => {
     object.traverse((child) => {
+      // 物理材质
       setTimeout(() => {
         if (child instanceof THREE.Mesh) {
-          uniforms[child.uuid] = JSON.parse(JSON.stringify(inituniforms))
+          // uniforms[child.uuid] = JSON.parse(JSON.stringify(inituniforms))
           // console.log(uniforms);
-          const material = new THREE.ShaderMaterial({
-            uniforms: uniforms[child.uuid],
-            vertexShader: vertexShader,
-            fragmentShader: fragmentShader,
+          const material = new THREE.MeshPhysicalMaterial({
+            metalness: 1,
+            roughness: 1,
+            // opacity: 0.1,
+            transparent: true, // 如果设置为false则透明度不生效
           })
           console.log(child.geometry);
           // child.geometry.computeVertexNormals()
@@ -203,6 +206,24 @@ const loadObjFile = (url) => {
           child.material = material
         }
       }, 1000)
+      // 着色器材质
+      // setTimeout(() => {
+      //   if (child instanceof THREE.Mesh) {
+      //     uniforms[child.uuid] = JSON.parse(JSON.stringify(inituniforms))
+      //     // console.log(uniforms);
+      //     const material = new THREE.ShaderMaterial({
+      //       uniforms: uniforms[child.uuid],
+      //       vertexShader: vertexShader,
+      //       fragmentShader: fragmentShader,
+      //     })
+      //     console.log(child.geometry);
+      //     // child.geometry.computeVertexNormals()
+      //     const { x, y, z } = child.geometry.boundingSphere.center
+      //     child.position.set(x, y, z)
+      //     child.geometry.center()
+      //     child.material = material
+      //   }
+      // }, 1000)
     })
     object.scale.set(modelInfoObj.scale, modelInfoObj.scale, modelInfoObj.scale)
     scene.add(object)
@@ -297,13 +318,25 @@ const loadBtn = () => {
 }
 const chartletBtn = (mapClass) => {
   const textureLoader = new THREE.TextureLoader();
+  console.log(mapClass.diffuseMap);
+  // uniforms[currentSelectModelUuid].diffuseMap.value = textureLoader.load('http://192.168.1.54:3000/static/img/1.png')
   uniforms[currentSelectModelUuid].diffuseMap.value = textureLoader.load(mapClass.diffuseMap)
   uniforms[currentSelectModelUuid].normalMap.value = textureLoader.load(mapClass.normalMap)
   uniforms[currentSelectModelUuid].roughnessMap.value = textureLoader.load(mapClass.roughnessMap)
   uniforms[currentSelectModelUuid].specularMap.value = textureLoader.load(mapClass.specularMap)
   uniforms[currentSelectModelUuid].diffuseMap.value.wrapS = uniforms[currentSelectModelUuid].diffuseMap.value.wrapT = THREE.RepeatWrapping;
 	uniforms[currentSelectModelUuid].diffuseMap.value.repeat.set( 2, 2 );
-  console.log(mapClass);
+}
+const deleteShaderMap = () => {
+  if (currentSelectModelUuid === '') {
+    alert('请先选中模型')
+    return
+  }
+  uniforms[currentSelectModelUuid].diffuseMap.value = null
+  uniforms[currentSelectModelUuid].normalMap.value = null
+  uniforms[currentSelectModelUuid].roughnessMap.value = null
+  uniforms[currentSelectModelUuid].specularMap.value = null
+  // uniforms[currentSelectModelUuid].diffuseMap.value.wrapS = uniforms[currentSelectModelUuid].diffuseMap.value.wrapT = null
 }
 // 点击选中模型
 const modelSelectFun = (event) => {
