@@ -41,7 +41,7 @@ const formatExcelData =async () => {
     url.value = filePath
     // init(data)
   }
-  console.log(data);
+
 }
 const loadxcel = (blob) => {
   const wb = XLSX.read(blob)

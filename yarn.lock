@@ -59,6 +59,105 @@
   "resolved" "https://registry.npmmirror.com/@babel/parser/-/parser-7.23.6.tgz"
   "version" "7.23.6"
 
+"@cropper/element-canvas@^2.0.0-beta.4":
+  "integrity" "sha512-xL7k5YgtbCLdR/QEj81An4HpPcBTJXf1lq+2xisyHALGeUKQXjA9cJQL7bldYscHAKjmFgNZ5xOMrNaYM++qZw=="
+  "resolved" "https://registry.npmmirror.com/@cropper/element-canvas/-/element-canvas-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/element" "^2.0.0-beta.4"
+    "@cropper/utils" "^2.0.0-beta.4"
+
+"@cropper/element-crosshair@^2.0.0-beta.4":
+  "integrity" "sha512-NiwIQZFh963i3E3QbXFiU9oNqs+P1cLJur3+e+DK0E3oLTa7rEfcigP/ZoMj/3DZ9Et0LPhKKRDY2SJ8ZszyPA=="
+  "resolved" "https://registry.npmmirror.com/@cropper/element-crosshair/-/element-crosshair-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/element" "^2.0.0-beta.4"
+    "@cropper/utils" "^2.0.0-beta.4"
+
+"@cropper/element-grid@^2.0.0-beta.4":
+  "integrity" "sha512-uMVVNk1SICwM2nA/7BHkyEojc0DAqsDFIUnC/sIGPtNf3fe5hYQyukby8BEPO7dlqzfIXYmnxacgLaPM9BZ7GQ=="
+  "resolved" "https://registry.npmmirror.com/@cropper/element-grid/-/element-grid-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/element" "^2.0.0-beta.4"
+    "@cropper/utils" "^2.0.0-beta.4"
+
+"@cropper/element-handle@^2.0.0-beta.4":
+  "integrity" "sha512-PHjC4ptBi0leQ82mPWvivNilNOpiBnV90ueqz99tli8f9bQobx+Os7dzKFwLIpj4WKCNRYhyEvxf1KuKhQisIg=="
+  "resolved" "https://registry.npmmirror.com/@cropper/element-handle/-/element-handle-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/element" "^2.0.0-beta.4"
+    "@cropper/utils" "^2.0.0-beta.4"
+
+"@cropper/element-image@^2.0.0-beta.4":
+  "integrity" "sha512-Nu5z5EFpyOEC2CAdhNZGfvpG9Xj6ZD46jvpJGKxsel7J7Kqf4qy+5m6nNdq2J+lK7YfTi16svkHeFwzNWZYLAA=="
+  "resolved" "https://registry.npmmirror.com/@cropper/element-image/-/element-image-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/element" "^2.0.0-beta.4"
+    "@cropper/element-canvas" "^2.0.0-beta.4"
+    "@cropper/utils" "^2.0.0-beta.4"
+
+"@cropper/element-selection@^2.0.0-beta.4":
+  "integrity" "sha512-wHZhWI80cC5TfFHI/2HT1A+ZbHifnAO+/IAr4IqkbaxtDZ9duqEvM2hhC+ZXgB3BYqVidAJNwpSnZkVK+DlJ6A=="
+  "resolved" "https://registry.npmmirror.com/@cropper/element-selection/-/element-selection-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/element" "^2.0.0-beta.4"
+    "@cropper/element-canvas" "^2.0.0-beta.4"
+    "@cropper/element-image" "^2.0.0-beta.4"
+    "@cropper/utils" "^2.0.0-beta.4"
+
+"@cropper/element-shade@^2.0.0-beta.4":
+  "integrity" "sha512-sTFTzlmu+Z31Hp7RHgUAxfDsRIQ/uG8RueOBBHLeKVGFZbYhsIElQaLcVDwebgqXLHVr9imCEvvIX11JeTqiTQ=="
+  "resolved" "https://registry.npmmirror.com/@cropper/element-shade/-/element-shade-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/element" "^2.0.0-beta.4"
+    "@cropper/element-canvas" "^2.0.0-beta.4"
+    "@cropper/element-selection" "^2.0.0-beta.4"
+    "@cropper/utils" "^2.0.0-beta.4"
+
+"@cropper/element-viewer@^2.0.0-beta.4":
+  "integrity" "sha512-bXW8OuezoHjyGFmQzX1QEj3OqvmSZwaLiQts+mVhcarYqAEVrK9s/bC/OqZKR2ZKkHeaiGWq+rTOBVAmhZja/A=="
+  "resolved" "https://registry.npmmirror.com/@cropper/element-viewer/-/element-viewer-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/element" "^2.0.0-beta.4"
+    "@cropper/element-canvas" "^2.0.0-beta.4"
+    "@cropper/element-image" "^2.0.0-beta.4"
+    "@cropper/element-selection" "^2.0.0-beta.4"
+    "@cropper/utils" "^2.0.0-beta.4"
+
+"@cropper/element@^2.0.0-beta.4":
+  "integrity" "sha512-1P8Vm9+OqTQz4B/rEA0t8xmzKUkYyxzxTiOaDMPKjKbG2R3UZgJBWRzvTgTsDudld9vlR6FfXpDBU1ZWA1BWxQ=="
+  "resolved" "https://registry.npmmirror.com/@cropper/element/-/element-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/utils" "^2.0.0-beta.4"
+
+"@cropper/elements@^2.0.0-beta.4":
+  "integrity" "sha512-cXKNFwudKcFrxn75VU9nLWNpjUnHcY0rUvtLn+2YVOLAnCTFLlu+azjOW1XZJ01FAEcC62Itb4CvDae+qgDpcQ=="
+  "resolved" "https://registry.npmmirror.com/@cropper/elements/-/elements-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/element" "^2.0.0-beta.4"
+    "@cropper/element-canvas" "^2.0.0-beta.4"
+    "@cropper/element-crosshair" "^2.0.0-beta.4"
+    "@cropper/element-grid" "^2.0.0-beta.4"
+    "@cropper/element-handle" "^2.0.0-beta.4"
+    "@cropper/element-image" "^2.0.0-beta.4"
+    "@cropper/element-selection" "^2.0.0-beta.4"
+    "@cropper/element-shade" "^2.0.0-beta.4"
+    "@cropper/element-viewer" "^2.0.0-beta.4"
+
+"@cropper/utils@^2.0.0-beta.4":
+  "integrity" "sha512-mrUTA3LbEq1Y3nPTC5X6koTd2Dk8P+6xTuhp4P8X3mg5Z7d8AVK+0OU5kbB49OLAaEfvGEqbZJ84rLwgMy9RHw=="
+  "resolved" "https://registry.npmmirror.com/@cropper/utils/-/utils-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+
 "@discoveryjs/json-ext@0.5.7":
   "integrity" "sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw=="
   "resolved" "https://registry.npmmirror.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz"
@@ -381,12 +480,22 @@
   dependencies:
     "@types/node" "*"
 
+"@types/web-bluetooth@^0.0.20":
+  "integrity" "sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow=="
+  "resolved" "https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.20.tgz"
+  "version" "0.0.20"
+
 "@types/ws@^8.5.5":
   "integrity" "sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A=="
   "resolved" "https://registry.npmmirror.com/@types/ws/-/ws-8.5.10.tgz"
   "version" "8.5.10"
   dependencies:
     "@types/node" "*"
+
+"@vue-office/docx@^1.6.0":
+  "integrity" "sha512-OKEapOPq223uszA8mRSOWPhdfBchJa6sIqP46eMrMMe5RSUrG9m3QE/o0JBIaMgxDrtNd7aI9CvF2kDvb7G2hw=="
+  "resolved" "https://registry.npmmirror.com/@vue-office/docx/-/docx-1.6.0.tgz"
+  "version" "1.6.0"
 
 "@vue/cli-overlay@^5.0.8":
   "integrity" "sha512-KmtievE/B4kcXp6SuM2gzsnSd8WebkQpg3XaB6GmFh1BJGRqa1UiW9up7L/Q67uOdTigHxr5Ar2lZms4RcDjwQ=="
@@ -610,6 +719,28 @@
   "integrity" "sha512-Iu8Tbg3f+emIIMmI2ycSI8QcEuAUgPTgHwesDU1eKMLE4YC/c/sFbGc70QgMq31ijRftV0R7vCm9co6rldCeOA=="
   "resolved" "https://registry.npmmirror.com/@vue/web-component-wrapper/-/web-component-wrapper-1.3.0.tgz"
   "version" "1.3.0"
+
+"@vueuse/core@^10.7.2":
+  "integrity" "sha512-AOyAL2rK0By62Hm+iqQn6Rbu8bfmbgaIMXcE3TSr7BdQ42wnSFlwIdPjInO62onYsEMK/yDMU8C6oGfDAtZ2qQ=="
+  "resolved" "https://registry.npmmirror.com/@vueuse/core/-/core-10.7.2.tgz"
+  "version" "10.7.2"
+  dependencies:
+    "@types/web-bluetooth" "^0.0.20"
+    "@vueuse/metadata" "10.7.2"
+    "@vueuse/shared" "10.7.2"
+    "vue-demi" ">=0.14.6"
+
+"@vueuse/metadata@10.7.2":
+  "integrity" "sha512-kCWPb4J2KGrwLtn1eJwaJD742u1k5h6v/St5wFe8Quih90+k2a0JP8BS4Zp34XUuJqS2AxFYMb1wjUL8HfhWsQ=="
+  "resolved" "https://registry.npmmirror.com/@vueuse/metadata/-/metadata-10.7.2.tgz"
+  "version" "10.7.2"
+
+"@vueuse/shared@10.7.2":
+  "integrity" "sha512-qFbXoxS44pi2FkgFjPvF4h7c9oMDutpyBdcJdMYIMg9XyXli2meFMuaKn+UMgsClo//Th6+beeCgqweT/79BVA=="
+  "resolved" "https://registry.npmmirror.com/@vueuse/shared/-/shared-10.7.2.tgz"
+  "version" "10.7.2"
+  dependencies:
+    "vue-demi" ">=0.14.6"
 
 "@webassemblyjs/ast@^1.11.5", "@webassemblyjs/ast@1.11.6":
   "integrity" "sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q=="
@@ -1924,10 +2055,13 @@
     "safe-buffer" "^5.0.1"
     "sha.js" "^2.4.8"
 
-"cropperjs@^1.6.1":
-  "integrity" "sha512-F4wsi+XkDHCOMrHMYjrTEE4QBOrsHHN5/2VsVAaRq8P7E5z7xQpT75S+f/9WikmBEailas3+yo+6zPIomW+NOA=="
-  "resolved" "https://registry.npmmirror.com/cropperjs/-/cropperjs-1.6.1.tgz"
-  "version" "1.6.1"
+"cropperjs@^2.0.0-beta.4":
+  "integrity" "sha512-tWIQnvbou6eJvQkajwhGLOOEw03dM/i23FmnUQtMKjuzbTDSMP61kcwM77Uit8MXEWcUb5PH8n4jawyrFvj5ag=="
+  "resolved" "https://registry.npmmirror.com/cropperjs/-/cropperjs-2.0.0-beta.4.tgz"
+  "version" "2.0.0-beta.4"
+  dependencies:
+    "@cropper/elements" "^2.0.0-beta.4"
+    "@cropper/utils" "^2.0.0-beta.4"
 
 "cross-spawn@^6.0.0":
   "integrity" "sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ=="
@@ -1965,11 +2099,6 @@
     "public-encrypt" "^4.0.0"
     "randombytes" "^2.0.0"
     "randomfill" "^1.0.3"
-
-"crypto-js@^4.2.0":
-  "integrity" "sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q=="
-  "resolved" "https://registry.npmmirror.com/crypto-js/-/crypto-js-4.2.0.tgz"
-  "version" "4.2.0"
 
 "css-declaration-sorter@^6.3.1":
   "integrity" "sha512-rtdthzxKuyq6IzqX6jEcIzQF/YqccluefyCYheovBOLhFT/drQA9zj/UbRAa9J7C0o6EG6u3E6g+vKkay7/k3g=="
@@ -6294,6 +6423,11 @@
   "resolved" "https://registry.npmmirror.com/vm-browserify/-/vm-browserify-1.1.2.tgz"
   "version" "1.1.2"
 
+"vue-demi@^0.14.6", "vue-demi@>=0.14.6":
+  "integrity" "sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w=="
+  "resolved" "https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.6.tgz"
+  "version" "0.14.6"
+
 "vue-hot-reload-api@^2.3.0":
   "integrity" "sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog=="
   "resolved" "https://registry.npmmirror.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz"
@@ -6345,7 +6479,7 @@
   "resolved" "https://registry.npmmirror.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@^3.2.0", "vue@^3.2.13", "vue@3.3.11":
+"vue@^2.0.0 || >=3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.2.0", "vue@^3.2.13", "vue@3.3.11":
   "integrity" "sha512-d4oBctG92CRO1cQfVBZp6WJAs0n8AK4Xf5fNjQCBeKCvMI1efGQ5E3Alt1slFJS9fZuPcFoiAiqFvQlv1X7t/w=="
   "resolved" "https://registry.npmmirror.com/vue/-/vue-3.3.11.tgz"
   "version" "3.3.11"

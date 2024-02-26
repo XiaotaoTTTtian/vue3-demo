@@ -165,7 +165,7 @@ export class ViewHelper extends THREE.Object3D {
 
         switch (intersects[0].object.userData.type) {
             case 'posX':
-                console.log('posX')
+
                 break
 
             case 'posY':

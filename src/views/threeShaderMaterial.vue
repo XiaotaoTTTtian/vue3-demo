@@ -112,7 +112,7 @@ function addGui() {
   const gui = new GUI()
   const lightFolder = gui.addFolder('灯光')
   lightFolder.add(lightObj, 'x', -100, 100).step(1).name('light x').onChange((e) => {
-    console.log('uniforms', uniforms);
+
     Object.keys(uniforms).forEach(key => {
       const {y, z} = uniforms[key].LightDirection1.value
       uniforms[key].LightDirection1.value = new THREE.Vector3(e,y,z)
@@ -162,7 +162,7 @@ const uploadImgBtn = () => {
 }
 const modelFileChange = (e) => {
   const files = Array.from(e.target.files)
-  console.log('file upload', files);
+
   files.forEach(file => {
     fileLoadFun(file)
   })
@@ -191,14 +191,14 @@ const loadObjFile = (url) => {
       setTimeout(() => {
         if (child instanceof THREE.Mesh) {
           // uniforms[child.uuid] = JSON.parse(JSON.stringify(inituniforms))
-          // console.log(uniforms);
+
           const material = new THREE.MeshPhysicalMaterial({
             metalness: 1,
             roughness: 1,
             // opacity: 0.1,
             transparent: true, // 如果设置为false则透明度不生效
           })
-          console.log(child.geometry);
+
           // child.geometry.computeVertexNormals()
           const { x, y, z } = child.geometry.boundingSphere.center
           child.position.set(x, y, z)
@@ -210,13 +210,13 @@ const loadObjFile = (url) => {
       // setTimeout(() => {
       //   if (child instanceof THREE.Mesh) {
       //     uniforms[child.uuid] = JSON.parse(JSON.stringify(inituniforms))
-      //     // console.log(uniforms);
+
       //     const material = new THREE.ShaderMaterial({
       //       uniforms: uniforms[child.uuid],
       //       vertexShader: vertexShader,
       //       fragmentShader: fragmentShader,
       //     })
-      //     console.log(child.geometry);
+
       //     // child.geometry.computeVertexNormals()
       //     const { x, y, z } = child.geometry.boundingSphere.center
       //     child.position.set(x, y, z)
@@ -227,7 +227,7 @@ const loadObjFile = (url) => {
     })
     object.scale.set(modelInfoObj.scale, modelInfoObj.scale, modelInfoObj.scale)
     scene.add(object)
-    // console.log('scene', scene);
+
   })
 
 }
@@ -246,7 +246,7 @@ const imgFileChange =async (e) => {
   //   formData.append("part_id", modelInfoObj.part_id + '')
   //   formData.append('picture', file)
   //   loading.value = true
-  //   console.log('modelInfoObj', modelInfoObj);
+
   //   const {data} = await uploadimgApi(formData)
   //   if (data.status > 0) {
   //     getFourImgFun()
@@ -266,7 +266,7 @@ const imgFileUpload =async (file) => {
     formData.append("part_id", modelInfoObj.part_id + '')
     formData.append('picture', file)
     loading.value = true
-    console.log('modelInfoObj', modelInfoObj);
+
     const {data} = await uploadimgApi(formData)
     if (data.status > 0) {
       getFourImgFun()
@@ -304,10 +304,10 @@ const getFourImgFun =async () => {
     part_id: modelInfoObj.part_id,
   }
   const {data} = await getImgApi(params)
-  console.log(data);
+
   if (data.status > 0) {
     const mapClass = getFourImgUrl(data.data)
-    console.log('maps', maps);
+
     chartletBtn(mapClass)
     // return 
   }
@@ -318,7 +318,7 @@ const loadBtn = () => {
 }
 const chartletBtn = (mapClass) => {
   const textureLoader = new THREE.TextureLoader();
-  console.log(mapClass.diffuseMap);
+
   // uniforms[currentSelectModelUuid].diffuseMap.value = textureLoader.load('http://192.168.1.54:3000/static/img/1.png')
   uniforms[currentSelectModelUuid].diffuseMap.value = textureLoader.load(mapClass.diffuseMap)
   uniforms[currentSelectModelUuid].normalMap.value = textureLoader.load(mapClass.normalMap)
@@ -348,7 +348,7 @@ const modelSelectFun = (event) => {
   let intersects = raycaster.intersectObjects(scene.children.filter(item => item.isGroup))
   
   if (intersects && intersects.length) {
-    console.log(intersects);
+
     modelControlFun(intersects[0].object)
     currentSelectModelUuid = intersects[0].object.uuid
     intersects = null
@@ -360,7 +360,7 @@ const modelSelectFun = (event) => {
 }
 const modelControlFun = (mesh) => {
   disposeTransformControls()
-  // console.log('mesh', mesh);
+
   rotateSelfControl = new TransformControls(camera, renderer.domElement)
   rotateSelfControl.setMode('translate')
   rotateSelfControl.attach(mesh)
@@ -397,7 +397,7 @@ const addPhysicsTexture = () => {
 }
 const physicsModelFileChange = () => {
   const files = Array.from(e.target.files)
-  console.log('file upload', files);
+
   files.forEach(file => {
     fileLoadFun1(file)
   })
@@ -424,13 +424,13 @@ const loadObjFile1 = (url) => {
       setTimeout(() => {
         if (child instanceof THREE.Mesh) {
           uniforms[child.uuid] = JSON.parse(JSON.stringify(inituniforms))
-          // console.log(uniforms);
+
           const material = new THREE.ShaderMaterial({
             uniforms: uniforms[child.uuid],
             vertexShader: vertexShader,
             fragmentShader: fragmentShader,
           })
-          console.log(child.geometry);
+
           // child.geometry.computeVertexNormals()
           const { x, y, z } = child.geometry.boundingSphere.center
           child.position.set(x, y, z)
@@ -509,7 +509,7 @@ onMounted(() => {
   window.addEventListener('dblclick', modelSelectFun)
   window.addEventListener('keyup', keyupFun)
   // const memoryInfo = window.performance.memory.jsHeapSizeLimit / (1024 * 1024);
-  // console.log('内存', Math.floor(memoryInfo), window.performance.memory);
+
 })
 </script>
 

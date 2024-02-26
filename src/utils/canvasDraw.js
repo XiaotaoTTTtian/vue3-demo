@@ -5,7 +5,7 @@ import EventDispatcher from './EventDispatcher'
 const getPoint = (vertices, scale) => {
   const result = []
   vertices.forEach(item => {
-    // console.log(item[0] / scale, Math.round(item[0] / scale))
+
     result.push(Math.round(item[0] / scale))
     result.push(Math.round(item[1] / scale))
   })
@@ -25,7 +25,7 @@ export default class CanvasDraw extends EventDispatcher {
     this.init(config)
   }
   init(config) {
-    console.log('init');
+
     this.stage = new Konva.Stage({
       container: document.getElementById(config.canvasId),
       width: config.width,
@@ -77,7 +77,7 @@ export default class CanvasDraw extends EventDispatcher {
   }
   eventFun() {
     this.stage.on('click', () => {
-      console.log('dblclickaaaaaaaaaa');
+
       // this.dispatchEvent('dblclick')
     })
   }
@@ -88,7 +88,7 @@ export default class CanvasDraw extends EventDispatcher {
       const fixedShapeNum = this.stage.find(`.${this.fixedShapeName}`).length
       const id = generateId() + ''
       if (fixedShapeNum === 0) {
-        // console.log('执行了')
+
         data.drawShape.forEach((item, index) => {
           const points = getPoint(item, this.scale)
           const fixedShapeId = 'fixed' + id + index
@@ -97,7 +97,7 @@ export default class CanvasDraw extends EventDispatcher {
         this.stage.add(this.fixedLayer)
       }
       if (data.detectionShape) {
-        // console.log(data.detectionShape)
+
         data.detectionShape.forEach((item, index) => {
           const points = getPoint(item.point, this.scale)
           const asyncShapeId = 'async' + id + index
@@ -116,7 +116,7 @@ export default class CanvasDraw extends EventDispatcher {
               y: Math.round(item.textPoint.y / this.scale),
               text: item.textScore
             })
-            // console.log(points)
+
           }
         })
         this.stage.add(this.layerShape)
@@ -143,7 +143,7 @@ export default class CanvasDraw extends EventDispatcher {
     this.fixedLayer.destroyChildren()
   }
   drawPolygon() {
-    console.log(111, this.stage);
+
     const initLine = {
       id: generateId() + '',
       type: "polygon",
@@ -168,7 +168,7 @@ export default class CanvasDraw extends EventDispatcher {
       const y = evt.offsetY;
       // 判断有没有闭合，方便操作，当点击到起始位置的一定范围内即视为闭合
       if (Math.abs(path?.[0] - x) <= 5 && Math.abs(path?.[1] - y) <= 5) {
-        console.log(333);
+
         auxiliaryLine.destroy();
         polygonShape.destroy();
         polygonShape = new Konva.Line(initLine)
@@ -237,13 +237,13 @@ export default class CanvasDraw extends EventDispatcher {
     const onMousedown = ({evt}) => {
       // if ()
       if (!polygonShape) { return }
-      console.log(222);
+
       const x = evt.offsetX;
       const y = evt.offsetY;
       path.push(...[x, y]);
       // 判断有没有闭合，方便操作，当点击到起始位置的一定范围内即视为闭合
       if (path.length === 4) {
-        console.log(333);
+
         auxiliaryLine.destroy();
         polygonShape.destroy();
         polygonShape = new Konva.Line(initLine)
@@ -254,13 +254,13 @@ export default class CanvasDraw extends EventDispatcher {
           lineJoin: "round",
           dash: [10],
         });
-        // console.log();
+
         // path.push(...[x, y]);
         this.polygon(path, generateId() + '', 'blue', this.fixedShapeName)
         path = []
         return;
       }
-      console.log(444);
+
       polygonShape.setAttrs({ points: path });
       // path只有2个位置(一对x,y)就代表第一次插入，把图形放到 layer 里
       if (path.length === 2) {

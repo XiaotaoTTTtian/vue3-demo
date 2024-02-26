@@ -23,8 +23,8 @@
 <script setup>
 import { onMounted, ref, nextTick } from 'vue'
 import knovaImgClip from '../utils/imageclip'
-import Cropper from 'cropperjs'
-import 'cropperjs/dist/cropper.min.css'
+// import Cropper from 'cropperjs'
+// import 'cropperjs/dist/cropper.min.css'
 
 const canvasInstance = ref()
 const cropper = ref()
@@ -40,10 +40,10 @@ onMounted(() => {
   //   checkCrossOrigin: true,
   //   viewMode: 2,
   // });
-  drawImage()
+  // drawImage()
 })
 const clipImg = () => {
-  console.log(cropper.value)
+
 }
 const drawImage = () => {
   const image = document.getElementById('image')
@@ -53,15 +53,15 @@ const drawImage = () => {
 }
 const affirmClipImg = () => {
   if (!cropper.value.cropped) {
-    console.log(1111)
+
     return
   }
   cropper.value.getCroppedCanvas().toBlob((blob) => {
-    console.log(blob)
+
     const href = window.URL.createObjectURL(blob)
     const image = document.getElementById('image')
     image.src = href
-    console.log(href)
+
     drawImage()
   }, 'image/png')
   cancelCropper()
@@ -73,7 +73,7 @@ const cancelCropper = () => {
   }
 }
 const fileChange = (e) => {
-  console.log(e.target.files[0])
+
   const file = e.target.files[0]
 
   if (!file.type.includes('image/')) {

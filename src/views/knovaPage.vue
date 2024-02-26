@@ -20,7 +20,7 @@ onMounted(() => {
   })
 })
 const drawPolugonBtn = () => {
-  console.log('drawPolugonBtn');
+
   if (canvasInstance.value) {
     canvasInstance.value.drawPolygon()
   }

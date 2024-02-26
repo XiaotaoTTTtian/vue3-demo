@@ -84,11 +84,11 @@ onMounted(() => {
   // const url = 'http://192.168.1.119:8081/video?port=8091&app=video&stream=192.168.1.129'
   width.value = divRef.value.offsetWidth
   height.value = divRef.value.offsetHeight
-  // console.log(url.value);
+
   // initFlvExtend(url.value)
 })
 const playerVideo = () => {
-  console.log(111);
+
   initFlvExtend(url.value)
 }
 // const destroy = () => {

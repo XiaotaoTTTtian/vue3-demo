@@ -10,7 +10,7 @@ export default class knovaImgClip {
   }
 
   init(config) {
-    console.log('init');
+
     this.stage = new Konva.Stage({
       container: document.getElementById(config.canvasId),
       width: config.width,
@@ -59,7 +59,7 @@ export default class knovaImgClip {
     //   const { attrs } = e.target;
     //   this.oldAttrs = JSON.parse(JSON.stringify(attrs))
     //   this.isTransform = true;
-    //   console.log('rect drag start', this.isTransform);
+
       
     // })
     rect.on('dragend', (e) => {
@@ -67,12 +67,12 @@ export default class knovaImgClip {
       
       // setTimeout(() => {this.isTransform = false;}, 100)
       const { attrs } = e.target;
-      console.log('rect draw end', attrs);
+
       // this.modificationRectInfo(attrs);
     });
   }
   clipImg() {
-    // console.log(this.layerImg);
+
     // const group = new Konva.Group({
     //   clip: {
     //     x: 0,
@@ -93,6 +93,6 @@ export default class knovaImgClip {
       scale: 10
     })
     
-    console.log(this.layerImg);
+
   }
 }

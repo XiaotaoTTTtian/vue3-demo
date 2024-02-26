@@ -44,7 +44,7 @@ const initFlvExtend = (url, id) => {
     hasAudio: false,
     withCredentials: false
   })
-  console.log('id', id, url);
+
   player.value.attachMediaElement(element)
   player.value.load()
   player.value.play()
@@ -100,7 +100,7 @@ onMounted(() => {
   }, 100)
 })
 const playerVideo = () => {
-  console.log(111);
+
   initFlvExtend(url.value)
 }
 </script>

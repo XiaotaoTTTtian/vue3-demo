@@ -106,7 +106,7 @@ const switchTextureType = (type) => {
 }
 const loadImgBtn = (url) => {
   // const imgDom = document.getElementById(url)
-  // console.log(img);
+
   downloadImage(url)
 }
 function downloadImage(url, filename) {
@@ -114,7 +114,7 @@ function downloadImage(url, filename) {
     .then(response => response.blob())
     .then(blob => {
       const file = new File([blob], 'img.png', {type: 'image/png'})
-      console.log(file);
+
       emit('uploadFile', file)
     });
 }

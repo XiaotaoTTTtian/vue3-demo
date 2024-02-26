@@ -9,6 +9,8 @@
       <div class="item" @click="setRouter('threeShaderMaterial')">threeShaderMaterial</div>
       <div class="item" @click="setRouter('ExcelShow')">ExcelShow</div>
       <div class="item" @click="setRouter('PdfShow')">PdfShow</div>
+      <div class="item" @click="setRouter('CropperPage')">CropperPage</div>
+      <div class="item" @click="setRouter('CustomEvent')">CustomEvent</div>
     </div>
     <div class="content">
       <!-- <component :is="componentNamea" /> -->
@@ -20,6 +22,8 @@
       <threeShaderMaterial v-if="componentNamea === 'threeShaderMaterial'" />
       <ExcelShow v-if="componentNamea === 'ExcelShow'" />
       <PdfShow v-if="componentNamea === 'PdfShow'" />
+      <CropperPage v-if="componentNamea === 'CropperPage'" />
+      <CustomEvent v-if="componentNamea === 'CustomEvent'" />
     </div>
   </div>
 </template>
@@ -34,9 +38,11 @@ import knovaDemo from '@/views/knovaDemo.vue';
 import threeShaderMaterial from '@/views/threeShaderMaterial.vue';
 import ExcelShow from '@/views/excelShow.vue';
 import PdfShow from '@/views/pdfShow.vue';
+import CropperPage from '@/views/cropping.vue'
+import CustomEvent from '@/views/customEvent.vue';
 
 const locationComponentName = localStorage.getItem('locationComponentName')
-// console.log();
+
 const componentNamea = ref(locationComponentName || 'twoVideoPage')
 const setRouter = (name) => {
   location.reload()
